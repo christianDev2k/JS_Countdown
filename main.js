@@ -5,6 +5,7 @@ const halloweenDay = new Date('2023-10-31');
 const valentineDay = new Date('2024-02-14');
 const countDownBg = document.querySelector('.countdown');
 const showExpired = document.querySelector('#showExpired');
+const showResult = document.querySelectorAll('.showDay');
 
 function countDown(day) {
     // Khởi tạo về 00h00p00s mặc định 07h00p00s
@@ -21,10 +22,9 @@ function countDown(day) {
     const x = setInterval(function () {
         let currentDay = new Date().getTime();
         let count = eventDay - currentDay;
-        
+
         // Điều kiện dừng và show kết quả
         count -= 1000;
-        let showResult = document.querySelectorAll('.showDay');
         if (count <= 0) {
             clearInterval(x);
             showExpired.innerText = 'EVENT EXPIRED';
