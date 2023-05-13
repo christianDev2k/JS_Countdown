@@ -1,5 +1,8 @@
 .countdown {
     background-image: linear-gradient(35deg, red, purple);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 .countdown__content {
     width: 60%;
@@ -15,10 +18,6 @@
 .seclect__group {
     border: 2px solid rgba(255, 255, 255, 0.8);
     width: 65%;
-    margin: 0 auto;
-    border-radius: 6px;
-    display: flex;
-    position: relative;
 }
 
 .countdown__select {
@@ -29,9 +28,7 @@
     font-size: 25px;
     background-color: transparent;
     color: white;
-    position: relative;
     border: none;
-    flex-grow: 1;
     background: url(https://upload.wikimedia.org/wikipedia/commons/9/9d/Caret_down_font_awesome_whitevariation.svg) no-repeat right 0.8em center / 1.4em, linear-gradient(to left, rgba(255, 255, 255, 0.3) 3em, rgba(51, 2, 2, 0.2) 3em);
 }
 
@@ -50,3 +47,27 @@
     align-items: center;
     justify-content: center;
 }
+
+/* @media screen and (max-width: 991.98px) {    
+    .countdown__heading {
+        font-size: 42px;
+    }
+
+    .seclect__group {
+        width: 80%;
+    }
+
+    .countdown__select {
+        font-size: 20px;
+    }
+
+    .showDay {
+        font-size: 20px;
+        width: 80px;
+        height: 80px;
+    }
+}
+
+@media screen and (max-width: 767.98px) {
+
+} */

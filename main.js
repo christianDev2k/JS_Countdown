@@ -28,14 +28,19 @@ function countDown(day) {
             clearInterval(x);
         })
 
+        let time = [];
 
-        //Quy đổi thời gian từ mili giây - ngày / giờ / phút / giây
-        let days = Math.floor(count / 86400000);
-        let hours = Math.floor(count % 86400000 / 3600000);
-        let minutes = Math.floor(count % 3600000 / 60000);
-        let seconds = Math.floor(count % 60000 / 1000);
+        // Quy đổi thời gian từ mili giây - ngày / giờ / phút / giây
+        time[0] = Math.floor(count / 86400000);
+        time[1] = Math.floor(count % 86400000 / 3600000);
+        time[2] = Math.floor(count % 3600000 / 60000);
+        time[3] = Math.floor(count % 60000 / 1000);
 
         // Inner vào HTML 
+        let showResult = document.querySelectorAll('.showDay');
+        showResult.forEach(function (item, index) {
+            item.innerHTML = time[index];
+        })
     }, 1000);
 }
 
